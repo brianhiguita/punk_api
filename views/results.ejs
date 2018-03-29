@@ -1,0 +1,32 @@
+<% include partials/header %>
+<% data.forEach(function(beer){ %>
+
+
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4"><%= beer['name'] %> </h1>
+      <p class="lead">alcohol percentage - <%= beer['abv'] %>%</p>
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-lg-4">
+            <img class="img-thumbnail beer-image" src="<%= beer['image_url'] %>" alt="">
+        </div>
+        <div class="col-lg-6">
+          <p class="lead"><strong>ingredients </strong></p>
+          <p><%= beer['ingredients'] %></p>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+<% }) %>
+
+<% include partials/footer %>
